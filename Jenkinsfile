@@ -21,7 +21,8 @@ pipeline {
         stage('Upload to AWS') {
         steps {
           withAWS(region:'us-west-2',credentials:'blueocean') {
-            s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'c3pipelines')
+            s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'sagemaker-us-west-2-455056554007
+')
           }
         }
       }
